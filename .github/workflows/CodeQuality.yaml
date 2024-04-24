@@ -1,0 +1,9 @@
+name: Code Quality Report
+on: [pull_request]
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Code quality report
+        run: echo "Generate and publish your code quality report here"
