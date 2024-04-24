@@ -22,7 +22,6 @@ jobs:
 
     - name: Run Selenium tests
       run: |
-        # Tu wpisz komendę uruchamiającą twoje testy Selenium, np.:
         pytest
 
     - name: Notify stakeholders
