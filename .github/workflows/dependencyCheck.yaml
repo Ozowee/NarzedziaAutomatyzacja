@@ -1,0 +1,9 @@
+name: Dependency Check
+on: [schedule]
+jobs:
+  check-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check dependencies
+        run: echo "Check for dependency updates here"
