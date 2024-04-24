@@ -1,0 +1,11 @@
+name: Build and Test
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup environment
+        run: echo "Setup your build environment here"
+      - name: Run tests
+        run: echo "Run tests here"
