@@ -17,3 +17,5 @@ jobs:
 
       - name: Deploy to Test Environment
         run: echo "Tu mogą być polecenia lub akcje do wdrażania aplikacji w środowisku testowym"
+        env:
+          TEST_ENVIRONMENT_URL: ${{ secrets.TEST_ENVIRONMENT_URL }}
