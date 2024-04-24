@@ -16,3 +16,4 @@ jobs:
               repo: context.repo.repo,
               body: 'Welcome to the project and thank you for your contribution!'
             })
+          github-token: ${{ secrets.GITHUB_TOKEN }}
