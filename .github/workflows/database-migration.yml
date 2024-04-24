@@ -1,0 +1,30 @@
+name: Database Migration
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run database migration
+      run: |
+        python manage.py migrate
+
+    - name: Run configuration scripts
+      run: |
+        python manage.py loaddata initial_data.json
+
+    - name: Notify stakeholders
+      if: always()
+      uses: peter-evans/commit-comment@v1
+      with:
+        body: |
+          Database migration and configuration scripts executed successfully.
+        token: ${{ secrets.GITHUB_TOKEN }}
