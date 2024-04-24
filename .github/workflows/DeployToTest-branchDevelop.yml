@@ -1,0 +1,19 @@
+name: Deploy to Test Environment
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Build Application
+        run: echo "Tu mogą być polecenia do budowania aplikacji, na przykład npm install i npm build"
+
+      - name: Deploy to Test Environment
+        run: echo "Tu mogą być polecenia lub akcje do wdrażania aplikacji w środowisku testowym"
