@@ -1,0 +1,23 @@
+name: Deploy to Production
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Build and Deploy
+        run: |
+          echo "Uruchomienie procesu budowania i wdrażania na produkcję..."
+      - name: Notify Deployment Success
+        run: echo "Powiadomienie o pomyślnym wdrożeniu na produkcję."
+        # Tutaj można dodać skrypt wysyłający powiadomienia, np. przez Slack, Teams, etc.
