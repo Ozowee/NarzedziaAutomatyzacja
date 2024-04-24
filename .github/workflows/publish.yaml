@@ -1,0 +1,11 @@
+name: Release Project
+on:
+  release:
+    types: [created]
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish release
+        run: echo "Opublikuj swój projekt”
