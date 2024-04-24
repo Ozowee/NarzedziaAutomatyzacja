@@ -1,0 +1,9 @@
+name: Generate Documentation
+on: [push]
+jobs:
+  document:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate documentation
+        run: echo "Generate your project documentation here"
